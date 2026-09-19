@@ -1,0 +1,19 @@
+import random
+limite = 2
+numero_aleatorio = random.randint(0, 20)
+print("Jogo da advinhação, tente advinhar o número random com 5 tentativas! o numero mínimo é 1 e o máximo é 20!")
+print(f"{numero_aleatorio}")
+for i in range(0, 5):
+    tentativa1 = int(input("Tentativa 1:"))
+    if tentativa1 == numero_aleatorio:
+        print("Acertou!")
+        break
+    else:
+        print(f"Errou, numero era {numero_aleatorio}")
+
+    diferenca = abs(numero_aleatorio - tentativa1)
+    print(f"{diferenca}")
+    if diferenca > 2:
+        print("É maior")
+    else:
+        print("É menor!")
